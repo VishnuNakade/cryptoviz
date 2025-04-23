@@ -29,21 +29,27 @@ CryptoViz is a dynamic and responsive cryptocurrency dashboard built with ReactJ
 ## 📸 Screenshots
 
 1. **☀️ Dashboard View (Light Mode):**
+
     ![Light Mode](public/screenshot1.png)
 
 2. **🌙 Dashboard View (Dark Mode):**
+
     ![Dark Mode](public/screenshot2.png)
 
 3. **📃 Market data:**
+
     ![Market data](public/screenshot3.png)
 
 4. **📈 Price chart (last 7 days):**
+
     ![Price chart](public/screenshot4.png)
 
 5. **💸 Market Distribution:**
+
     ![Market Distribution](public/screenshot5.png)
 
 6. **🔗 Links to official site, GitHub, and Twitter:**
+
     ![Links](public/screenshot6.png)
 
 ---
