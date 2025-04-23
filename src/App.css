@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+  min-height: 100vh;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.dark-mode a {
+  color: #0d6efd;
+}
+
+.dark-mode .card {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.coin-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
