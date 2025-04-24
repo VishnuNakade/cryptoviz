@@ -86,7 +86,7 @@ function Home() {
       placeholder="Search by coin name or symbol..."
       value={search}
       onChange={handleSearch}
-      aria-label="Search cryptocurrencies"
+      aria-label="Search cryptocurrencies" //Makes it accessible for screen readers
     />
   </div>
 </Col>
@@ -118,7 +118,7 @@ function Home() {
 
       <Row>
         {loading
-          ? [...Array(8)].map((_, idx) => (
+          ? [...Array(8)].map((_, idx) => (  //idx is used as a unique key for each placeholder. //probably from react-loading-skeleton
               <Col md={4} lg={3} sm={6} xs={12} className="mb-4" key={idx}>
                 <div className="p-3 border rounded">
                   <Skeleton height={50} width={50} circle className="mb-2" />

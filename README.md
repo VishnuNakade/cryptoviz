@@ -95,7 +95,7 @@ CryptoViz/
 ├── public/
 │   └── index.html
 ├── src/
-│   ├── api/              # 📡 API calls (e.g., coingecko.js)
+│   ├
 │   ├── components/       # 🧩 Reusable UI components (e.g., CoinCard, Header)
 │   ├── pages/            # 📄 Page-level components (e.g., Home, CoinDetail)
 │   ├── App.js            # 🌐 Main app component with routes

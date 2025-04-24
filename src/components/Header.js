@@ -15,7 +15,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
         <Navbar.Brand as={Link} to="/" className="fw-bold">
           💰 CryptoViz
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/*This creates a hamburger menu icon on smaller screens. */}
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="me-3">

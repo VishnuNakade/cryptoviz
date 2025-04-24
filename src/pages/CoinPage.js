@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; //useParams is a React Router hook
 import axios from 'axios';
 import { Container, Tab, Tabs, Row, Col, Image, Alert } from 'react-bootstrap';
 import {
@@ -10,7 +10,8 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import News from '../components/News';
 
 const CoinPage = () => {
-  const { id } = useParams();
+
+  const { id } = useParams(); //access the URL parameters from the current route. //gets 'id' from URL
   const [coin, setCoin] = useState(null);
   const [chartData, setChartData] = useState([]);
   const [error, setError] = useState(null);
@@ -42,9 +43,9 @@ const CoinPage = () => {
         }
       );
 
-      const formatted = data.prices.map(price => ({
-        time: new Date(price[0]).toLocaleDateString(),
-        value: price[1],
+      const formatted = data.prices.map(price => ({ //[timestamp, price] pair.
+        time: new Date(price[0]).toLocaleDateString(),  //Converts the timestamp into a JavaScript Date object. //Formats the date into a readable string like "4/15/2023".
+        value: price[1], //The actual price value at that time.
       }));
       setChartData(formatted);
     } catch (err) {
@@ -172,7 +173,7 @@ const CoinPage = () => {
                 >
                   {pieColors.map((color, index) => <Cell key={`cell-${index}`} fill={color} />)}
                 </Pie>
-                <Tooltip />
+                <Tooltip /> {/*hover tooltips in charts. */}
                 <Legend />
               </PieChart>
             </ResponsiveContainer>

@@ -4,24 +4,27 @@ import { useNavigate } from 'react-router-dom';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 function CoinCard({ coin, isFavorite, toggleFavorite }) {
+
   const navigate = useNavigate();
 
   const handleCardClick = () => navigate(`/coin/${coin.id}`);
   const handleHeartClick = (e) => {
-    e.stopPropagation(); // prevent card navigation
-    toggleFavorite(coin.id);
+    e.stopPropagation(); // prevent card navigation //it prevents the click from triggering the card's overall click event
+    toggleFavorite(coin.id);  //adds/removes the coin from the favorites list.
+
+
   };
 
   return (
-    <Card
+    <Card  //for a box-style layout.
     className="shadow-sm h-100 position-relative coin-card"
     onClick={handleCardClick}
     style={{ cursor: 'pointer' }}
   >
   
-      <Card.Body>
+      <Card.Body>  
         {/* Favorite Icon */}
-        <div
+        <div // main content area inside the card.
           className="position-absolute top-0 end-0 p-2"
           onClick={handleHeartClick}
           style={{ zIndex: 10 }}
@@ -45,7 +48,7 @@ function CoinCard({ coin, isFavorite, toggleFavorite }) {
         </div>
 
         <div className="mb-2">
-          <strong>💲 Price: </strong>${coin.current_price.toLocaleString()}
+          <strong>💲 Price: </strong>${coin.current_price.toLocaleString()} {/**formats number based on locale. */}
         </div>
         <div className="mb-2">
           <strong>📉 24h Change: </strong>
